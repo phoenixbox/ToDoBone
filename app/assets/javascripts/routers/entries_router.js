@@ -1,9 +1,15 @@
 Todobone.Routers.Entries = Backbone.Router.extend({
   routes : {
-    '' : 'index'
+    '' : 'index',
+    'entries/:id' : 'show'
   },
 
   index : function(){
-    alert("Backbone Home Page!!")
+    entryView = new Todobone.Views.EntriesIndex();
+    $('#container').html(entryView.render().el)
+  },
+
+  show : function(id){
+    alert('Entry for '+id)
   }
 });
