@@ -4,7 +4,8 @@ window.Todobone = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    new Todobone.Routers.Entries();
+    Backbone.history.start();
   }
 };
 
