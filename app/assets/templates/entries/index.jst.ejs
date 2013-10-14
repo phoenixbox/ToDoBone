@@ -2,4 +2,13 @@
 
 <p>This is ToDoBone! Throw your productivity a bone with ToDoBone!</p>
 
-<%= entries.length %>
+<form id="new-entry">
+  <input type='text' name='name' id='new_entry_name'>
+  <input type='submit' value='Add!'>
+</form>
+
+<ul>
+  <% _.each(entries.models, function(entry) {%>
+    <li><%= entry.get('name') %></li>
+  <% }) %>
+</ul>

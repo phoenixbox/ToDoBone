@@ -5,7 +5,7 @@ Todobone.Routers.Entries = Backbone.Router.extend({
   },
 
   index : function(){
-    new Todobone.Views.EntriesIndex({collection: this.collection});
+    new Todobone.Views.EntriesIndex();
   },
 
   show : function(id){
