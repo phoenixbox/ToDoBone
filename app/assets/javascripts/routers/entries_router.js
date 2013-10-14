@@ -4,14 +4,8 @@ Todobone.Routers.Entries = Backbone.Router.extend({
     'entries/:id' : 'show'
   },
 
-  initialize : function() {
-    collection = new Todobone.Collections.Entries();
-    collection.fetch();
-  },
-
   index : function(){
-    entryView = new Todobone.Views.EntriesIndex({collection: this.collection});
-    $('#container').html(entryView.render().el)
+    new Todobone.Views.EntriesIndex({collection: this.collection});
   },
 
   show : function(id){
